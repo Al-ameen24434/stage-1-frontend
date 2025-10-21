@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <meta
+      name="description"
+      content="Get in touch with me through this contact form"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navigation" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li>
+            <a href="contact.html" class="nav-link active" aria-current="page"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content contact-page">
+      <div class="page-header">
+        <h1>Contact Us</h1>
+        <p class="page-subtitle">Get in touch with me</p>
+      </div>
+
+      <div class="contact-content">
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Full Name *</label>
+            <input
+              type="text"
+              id="contact-name"
+              data-testid="test-contact-name"
+              class="form-input"
+              required
+              aria-required="true"
+              aria-describedby="error-name"
+            />
+            <span
+              id="error-name"
+              data-testid="test-contact-error-name"
+              class="error-message"
+              role="alert"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email" class="form-label">Email *</label>
+            <input
+              type="email"
+              id="contact-email"
+              data-testid="test-contact-email"
+              class="form-input"
+              required
+              aria-required="true"
+              aria-describedby="error-email"
+            />
+            <span
+              id="error-email"
+              data-testid="test-contact-error-email"
+              class="error-message"
+              role="alert"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject" class="form-label">Subject *</label>
+            <input
+              type="text"
+              id="contact-subject"
+              data-testid="test-contact-subject"
+              class="form-input"
+              required
+              aria-required="true"
+              aria-describedby="error-subject"
+            />
+            <span
+              id="error-subject"
+              data-testid="test-contact-error-subject"
+              class="error-message"
+              role="alert"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message" class="form-label">Message *</label>
+            <textarea
+              id="contact-message"
+              data-testid="test-contact-message"
+              class="form-textarea"
+              rows="6"
+              required
+              aria-required="true"
+              aria-describedby="error-message"
+            ></textarea>
+            <span
+              id="error-message"
+              data-testid="test-contact-error-message"
+              class="error-message"
+              role="alert"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <button
+            type="submit"
+            data-testid="test-contact-submit"
+            class="submit-button"
+          >
+            Send Message
+          </button>
+
+          <div
+            id="success-message"
+            data-testid="test-contact-success"
+            class="success-message"
+            role="status"
+            aria-live="polite"
+          ></div>
+        </form>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
